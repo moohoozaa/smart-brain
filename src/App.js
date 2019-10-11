@@ -40,7 +40,7 @@ class App extends Component {
   state = initialState
 
   calculateFaceLocations = data => {
-    console.log(data)
+    //console.log(data)
     if (!data.outputs[0].data.regions) return []
     return data.outputs[0].data.regions.map(region => {
       const clarifaiFace = region.region_info.bounding_box
@@ -103,7 +103,7 @@ class App extends Component {
             })
             .catch(err => console.log(err))
         }
-        console.log(response)
+        //console.log(response)
         this.displayFaceBoxes(this.calculateFaceLocations(response))
       })
       .catch(err => console.log(err))
@@ -119,7 +119,7 @@ class App extends Component {
   }
 
   loadUser = data => {
-    console.log(data)
+    //console.log(data)
     this.setState({
       user: {
         id: data.id,
