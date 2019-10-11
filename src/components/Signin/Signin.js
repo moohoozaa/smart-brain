@@ -15,8 +15,7 @@ class Signin extends React.Component {
   }
 
   onSubmitSignIn = () => {
-    //console.log(this.state)
-    fetch('https://damp-tor-45078.herokuapp.com/signin', {
+    fetch('https://face-detection-api-45078.herokuapp.com/signin', {
       method: 'post',
       headers: {
         'Content-Type': 'application/json'

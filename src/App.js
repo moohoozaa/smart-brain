@@ -70,7 +70,7 @@ class App extends Component {
       imageUrl: this.state.input,
       boxes: []
     })
-    fetch('https://damp-tor-45078.herokuapp.com/imageUrl', {
+    fetch('https://face-detection-api-45078.herokuapp.com/imageUrl', {
       method: 'post',
       headers: {
         'Content-Type': 'application/json'
@@ -82,7 +82,7 @@ class App extends Component {
       .then(response => response.json())
       .then(response => {
         if (response) {
-          fetch('https://damp-tor-45078.herokuapp.com/image', {
+          fetch('https://face-detection-api-45078.herokuapp.com/image', {
             method: 'put',
             headers: {
               'Content-Type': 'application/json'
